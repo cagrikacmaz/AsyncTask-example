@@ -1,0 +1,68 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity" >
+
+    <TextView
+        android:id="@+id/tv_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="10pt"
+        android:textColor="#444444"
+        android:layout_alignParentLeft="true"
+        android:layout_marginRight="9dip"
+        android:layout_marginTop="20dip"
+        android:layout_marginLeft="10dip"
+        android:text="Sleep time in Seconds:"/>
+    <EditText
+        android:id="@+id/in_time"
+        android:layout_width="150dip"
+        android:layout_height="wrap_content"
+        android:background="@android:drawable/editbox_background"
+        android:layout_toRightOf="@id/tv_time"
+        android:layout_alignTop="@id/tv_time"
+        android:inputType="number"
+        />
+
+    <Button
+        android:id="@+id/btn_run"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/in_time"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="61dp"
+        android:text="Run Async task" />
+    <TextView
+        android:id="@+id/tv_result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="7pt"
+        android:layout_below="@+id/btn_run"
+        android:layout_centerHorizontal="true" />
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="match_parent"
+        android:visibility="gone"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+ >
+    <WebView
+        android:id="@+id/webview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignStart="@+id/tv_result"
+        android:layout_below="@+id/tv_result"
+        android:layout_marginTop="42dp" />
+</LinearLayout>
+
+</LinearLayout>
